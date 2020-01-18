@@ -244,7 +244,7 @@ namespace cgcd
                 br.Write(_int_is("trait_2") == -1 ? max : _int("trait_2", 0, 15));
                 br.Write(_int("char_points", 0, 99));
                 br.Write(_null);
-                br.Write(_null);
+                br.Write(_int("style", 0 , 10));
                 numBytes = (int)br.BaseStream.Position;
             }
 

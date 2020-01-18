@@ -11,6 +11,10 @@ age = 99 // 16-99 - age of the character
 gender = 0 // 1 - female, 0 - male
 name = https://fodev.net // max 32 characters
 
+// appearance mod style
+// 0 = default
+style = 1
+
 //  tagskill can be 0-17
 //  only tag 4 can be disabled!
 //  if you want less than 3, you can select the same tag skill for multiple slots.
