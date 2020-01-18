@@ -208,9 +208,9 @@ namespace cgcd
             using (var br = new BinaryWriter(File.Open(outFile, FileMode.CreateNew)))
             {
                 var max = new byte[] { 0xff, 0xff, 0xff, 0xff };
-                var nop = new byte[] { 0x00, 0x00, 0x00, 0x00 };
+                var _null = new byte[] { 0x00, 0x00, 0x00, 0x00 };
 
-                br.Write(nop);
+                br.Write(_null);
                 br.Write(_int("st", 0, 10));
                 br.Write(_int("pe", 0, 10));
                 br.Write(_int("en", 0, 10));
@@ -219,19 +219,19 @@ namespace cgcd
                 br.Write(_int("ag", 0, 10));
                 br.Write(_int("lk", 0, 10));
                 for (var x = 0; x < 26; x++) // 0x20 - 0x84
-                    br.Write(nop);
+                    br.Write(_null);
                 br.Write(_int("age", 1, 99));
                 br.Write(_int("gender", 0,1));
                 for (var x = 0; x < 35; x++) // 0x90 - 0x118
-                    br.Write(nop);
+                    br.Write(_null);
                 for (var x = 0; x < 18; x++) // all skills
                     br.Write(_int("sk_" + x, 0, 300));
 
                 // 0x164-0x16F
-                br.Write(nop);
-                br.Write(nop);
-                br.Write(nop);
-                br.Write(nop);
+                br.Write(_null);
+                br.Write(_null);
+                br.Write(_null);
+                br.Write(_null);
                 var name = Encoding.ASCII.GetBytes(data["name"]).ToList();
                 while (name.Count < 32)
                     name.Add((byte)0);
@@ -243,8 +243,8 @@ namespace cgcd
                 br.Write(_int_is("trait_1") == -1 ? max : _int("trait_1", 0, 15));
                 br.Write(_int_is("trait_2") == -1 ? max : _int("trait_2", 0, 15));
                 br.Write(_int("char_points", 0, 99));
-                br.Write(nop);
-                br.Write(nop);
+                br.Write(_null);
+                br.Write(_null);
                 numBytes = (int)br.BaseStream.Position;
             }
 
