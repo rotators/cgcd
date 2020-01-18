@@ -1,0 +1,85 @@
+// https://github.com/rotators/cgcd
+// https://fodev.net 
+st  = 9  // 0-10 - strength 
+pe  = 9  // 0-10 - perception
+en  = 9  // 0-10 - endurance
+ch  = 10 // 0-10 - charisma
+in  = 10 // 0-10 - intelligence
+ag  = 10 // 0-10 - agility
+lk  = 1  // 0-10 - luck
+age = 99 // 16-99 - age of the character
+gender = 0 // 1 - female, 0 - male
+name = https://fodev.net // max 32 characters
+
+//  tagskill can be 0-17
+//  only tag 4 can be disabled!
+//  if you want less than 3, you can select the same tag skill for multiple slots.
+//  e.g tag_1 = 0, tag_2 = 0
+//  SKILL_SMALL_GUNS = 0,
+//  SKILL_BIG_GUNS = 1,
+//  SKILL_ENERGY_WEAPONS = 2,
+//  SKILL_UNARMED_COMBAT = 3,
+//  SKILL_MELEE = 4,
+//  SKILL_THROWING = 5,
+//  SKILL_FIRST_AID = 6,
+//  SKILL_DOCTOR = 7,
+//  SKILL_SNEAK = 8,
+//  SKILL_LOCKPICK = 9,
+//  SKILL_STEAL = 10,
+//  SKILL_TRAPS = 11,
+//  SKILL_SCIENCE = 12,
+//  SKILL_REPAIR = 13,
+//  SKILL_CONVERSANT = 14,
+//  SKILL_BARTER = 15,
+//  SKILL_GAMBLING = 16,
+//  SKILL_OUTDOORSMAN = 17,
+tag_1   = 0
+tag_2   = 1
+tag_3   = 2
+tag_4   = -1
+
+// trait can be 0-15
+// TRAIT_fast_metabolism = 0,
+// TRAIT_bruiser = 1,
+// TRAIT_small_frame = 2,
+// TRAIT_one_hander = 3,
+// TRAIT_finesse = 4,
+// TRAIT_kamikaze = 5,
+// TRAIT_heavy_handed = 6,
+// TRAIT_fast_shot = 7,
+// TRAIT_bloody_mess = 8,
+// TRAIT_jinxed = 9,
+// TRAIT_good_natured = 10,
+// TRAIT_drug_addict = 11,
+// TRAIT_drug_resistant = 12,
+// TRAIT_sex_appeal = 13,
+// TRAIT_skilled = 14,
+// TRAIT_gifted = 15,
+trait_1 = 13
+trait_2 = 15
+
+// unallocated character points
+char_points = 1
+
+// bonus skill points
+// e.g. for small guns, it's 35% + AG + bonus
+// sk_id, where id corresponds to the SKILL_ value above
+// e.g. sk_0 is small guns
+sk_0 = 100
+sk_1 = 100
+sk_2 = 100
+sk_3 = 300
+sk_4 = 300
+sk_5 = 300
+sk_6 = 300
+sk_7 = 300
+sk_8 = 300
+sk_9 = 300
+sk_10 = 300
+sk_11 = 300
+sk_12 = 300
+sk_13 = 300
+sk_14 = 300
+sk_15 = 300
+sk_16 = 300
+sk_17 = 300
