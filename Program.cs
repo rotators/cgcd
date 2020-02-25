@@ -38,7 +38,7 @@ namespace cgcd
             public List<Token> Tokenize(string file)
             {
                 tokens = new List<Token>();
-                buffer = File.ReadAllText(file);
+                buffer = File.ReadAllText(file)+ "\r\n";
                 len = buffer.Length - 1;
                 while (i != len)
                 {
@@ -127,7 +127,6 @@ namespace cgcd
                         return sb.ToString();
                     }
                     sb.Append(Read());
-
                     if (EOF())
                         throw new Exception($"unterminated {t}, starting from {spos}");
                 }
@@ -150,6 +149,10 @@ namespace cgcd
 
         static void Main(string[] args)
         {
+            // Force english language, for exceptions
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Threading.Thread.CurrentThread.CurrentCulture;
+
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var ch = Path.Combine(dir, "character.txt");
 
